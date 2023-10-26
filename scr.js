@@ -1,0 +1,1 @@
+document.body.innerHTML = '<h1> ye </h1>'
