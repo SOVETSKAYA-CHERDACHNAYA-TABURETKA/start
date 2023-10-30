@@ -54,11 +54,27 @@ void start(){
 };
 
 
+class dclass
+{
+    public:
+    int data;
+     dclass(int data)
+     {
+        this->data = data;
+        cout << "ye beb " << this << endl;
+     };
+     ~dclass()
+     {
+        cout << "damn they killed me " << this << endl;
+     };
+};
+
+
 int main(){
     grinder vitek;
     vitek.start();
     point a(9,9);
-
+    dclass b(1);
     return 0;
     
 };
