@@ -61,7 +61,7 @@ class dclass
      dclass(int data)
      {
         this->data = data;
-        cout << "ye beb " << this << endl;
+        cout << " ye beb " << this << endl;
      };
      ~dclass()
      {
@@ -69,12 +69,16 @@ class dclass
      };
 };
 
+void f(dclass val)
+{
+    cout << " the F is alive " << endl;
+};
 
 int main(){
-    grinder vitek;
+    /*grinder vitek;
     vitek.start();
-    point a(9,9);
+    point a(9,9);*/
     dclass b(1);
     return 0;
-    
+    f(1);
 };
