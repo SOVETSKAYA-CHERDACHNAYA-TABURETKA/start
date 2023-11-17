@@ -68,8 +68,7 @@ cout << "The shift coefficient for the second launch is " << be2 << endl;
 sx = (be2-be1)/(ke1-ke2);
 sy = ke1*sx+be1;
 cout << "The stronghold coordinates are " << sx << " ~ " << sy << " ." << endl;
-
-
+cout << "The distance to the Stronghold is approximately " << (sqrt((sx-e1x)*(sx-e1x)+(sy-e1y)*(sy-e1y))+sqrt((sx-e2x)*(sx-e2x)+(sy-e2y)*(sy-e2y)))/2 << "blocks away.";
     return 0;
 
 }
