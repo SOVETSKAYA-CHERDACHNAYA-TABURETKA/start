@@ -64,5 +64,26 @@ switch (act)
     break;
 }
 */
+
+
+int s = 0;
+for(int i = 0; i<1000000; i++)
+{
+int tl;
+tl = (i-i%1000)/1000;
+int tr;
+tr = i%1000;
+if (tl / 100 + (tl % 100 - tl % 10) + tl % 10 == tr / 100 + (tr % 100 - tr % 10) + tr % 10)
+{
+    cout << i << endl;
+    s+=1;
+}
+
+
+    
+
+}
+
+cout <<s <<endl;
     return 0;
 };
