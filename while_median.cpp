@@ -31,29 +31,3 @@ int main()
     return 0;
 }
 */
-int main()
-{
-    int count;
-    int sum;
-    int g_sum = 1;
-    char q;
-    while (true)
-    {
-        cout << "insert a number " << endl;
-        int num;
-        cin >> num;
-        sum +=num;
-        g_sum *=num;
-        ++count;
-        cout << "fin? (y/n)" << endl;
-        cin >> q;
-        if(q == 'y' || q == 'Y')
-        break;
-
-    }
-    cout << "arithmetic median is " << sum/count << endl;
-    cout << "geometric median is " << pow(g_sum, count);
-    
-    return 0;
-
-}
