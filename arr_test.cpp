@@ -17,57 +17,62 @@ for(int i = 0; i<N; i++)
 }
 int d_c = 0;
 cout << endl;
-int arr_d[10] = {0,0,0,0,0,0,0,0,0,0};
+int arr_d[10] = {0};
 for(int i = 0; i<10; i++)
 {
     for(int j = 0; j<N; j++)
     {
-        switch (arr[i])
+        /*switch (arr[i])
         {
-        case 1:
-            arr_d[0]++;
+        case (arr[i] == 1):
+            arr_d[0]+=1;
             break;
-        case 2:
-            arr_d[1]++;
+        case (arr[i] == 2):
+            arr_d[1]+=1;
             break;
-        case 3:
-            arr_d[2] ++;
+        case (arr[i] == 3):
+            arr_d[2] +=1;
             break;
-        case 4:
-            arr_d[3] ++;
+        case (arr[i] == 4):
+            arr_d[3] +=1;
             break;
-        case 5:
-            arr_d[4] ++;
+        case (arr[i] == 5):
+            arr_d[4] +=1;
             break;
-        case 6:
-            arr_d[5] ++;
+        case (arr[i] == 6):
+            arr_d[5] +=1;
             break;
-        case 7:
-            arr_d[6] ++;
+        case (arr[i] == 7):
+            arr_d[6] +=1;
             break;
-        case 8:
-            arr_d[7] ++;
+        case (arr[i] == 8):
+            arr_d[7] +=1;
             break;
-        case 9:
-            arr_d[8] ++;
+        case (arr[i] == 9):
+            arr_d[8] +=1;
             break;
-        case 0:
-            arr_d[9] ++;
+        case (arr[i] == 0):
+            arr_d[9] +=1;
             break;
         
         default:
             break;
+            */
+        if(arr[j] == i)
+        {
+            arr_d[i] +=1;
         }
     }
 }
+
 for(int i = 0; i<10; i++)
 {
     if(arr_d[i] >=1)
     {
-        cout << "dupes " << arr_d[i] << endl;
-        d_c += arr_d[i];
+        cout << "dupes of "<< i << ": " << arr_d[i] << endl;
+        d_c += (arr_d[i]-1);
     }
 }
-cout << "dupes " << d_c << endl;
+cout << "dupes overall " << d_c << endl;
     return 0;
 }

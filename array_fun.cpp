@@ -99,6 +99,56 @@ for(int i = 0; i<N; i++)
     if(arr[i] == max)
     count ++;
 }
+int d_c = 0;
+cout << endl;
+int arr_d[10] = {0};
+for(int i = 0; i<10; i++)
+{
+    for(int j = 0; j<N; j++)
+    {
+        /*switch (arr[i])
+        {
+        case (arr[i] == 1):
+            arr_d[0]+=1;
+            break;
+        case (arr[i] == 2):
+            arr_d[1]+=1;
+            break;
+        case (arr[i] == 3):
+            arr_d[2] +=1;
+            break;
+        case (arr[i] == 4):
+            arr_d[3] +=1;
+            break;
+        case (arr[i] == 5):
+            arr_d[4] +=1;
+            break;
+        case (arr[i] == 6):
+            arr_d[5] +=1;
+            break;
+        case (arr[i] == 7):
+            arr_d[6] +=1;
+            break;
+        case (arr[i] == 8):
+            arr_d[7] +=1;
+            break;
+        case (arr[i] == 9):
+            arr_d[8] +=1;
+            break;
+        case (arr[i] == 0):
+            arr_d[9] +=1;
+            break;
+        
+        default:
+            break;
+            */
+        if(arr[j] == i)
+        {
+            arr_d[i] +=1;
+        }
+    }
+}
+
 cout << "With " << count << " duplicates" << endl;
 count = 0;
 cout << "The smallest is " << min << endl;
@@ -112,5 +162,11 @@ cout << "With " << count << " duplicates" << endl;
 cout << "The median is " << mid << endl;
 cout << "The median quadratic deviation is " << MCD << endl;
 cout << "That meant that most frequent maximum is " << mid + MCD << endl << "And the most frequent minimum is " << mid - MCD << endl;
+cout << "Duplicate distribution: " << endl;
+for(int i =0; i<10; i++)
+{
+    cout << "For number "<< i << ":" << (arr_d[i]) << endl;
+
+}
     return 0;
 }
