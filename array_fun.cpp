@@ -15,10 +15,14 @@ float mid;
 cout << endl;
 int arr[N] = {};
 int arr_D[N]  = {};
-cout << "The resulting random array is below:" << endl;
+cout << "The resulting (random?) array is below:" << endl;
 for(int i = 0; i<N; i++)
 {
-    arr[i] = rand()%10;
+    //arr[i] = rand()%10;
+    cout << "Insert a number " << endl;
+    cin >> arr[i];
+    if(arr[i]>10)
+    arr[i] = arr[i]%10;
     cout << arr[i] << "; ";
     sum += arr[i];
 }
@@ -76,7 +80,7 @@ for(int i = 0; i<N; i++)
 }
 float MCD;
 MCD = sqrt(sum_D/(N-1));
-cout << endl << "sorted list is below:" << endl;
+cout << endl << "Sorted list is below:" << endl;
 for(int i = 0; i<N; i++)
 {
     cout << arr[i] << "; ";
