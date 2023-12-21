@@ -27,7 +27,7 @@ int main()
     }
     for(int i = 0; i<N/2; i++)
     {
-        cout << "Pair " << i << ": " << pair_seq_L[i] <<"; "<< pair_seq_R[i] << " ." << endl;
+        cout << "Pair " << i+1 << ": " << pair_seq_L[i] <<"; "<< pair_seq_R[i] << " ." << endl;
     }
     return 0;
 }
