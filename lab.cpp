@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cmath>
+#include <time.h>
 using namespace std;
 
 int main()
 {
+    srand(time(NULL));
     int N;
     cout << "Insert data range: " << endl;
     cin >> N;
@@ -15,8 +17,8 @@ int main()
     float dot_y_R[N/2] = {0};
 for (int i = 0; i < N; i++)
 {
-    x[i] = i;
-    cin >> y[i];
+    x[i] =i+ i*(1+rand()%100);
+    y[i] =i+ i*(log(1+rand()%10));
 }
 for(int i = 0; i<=N/2; i++)
 {
@@ -72,12 +74,14 @@ for(int i = 0; i<(N/2); i++)
 ratio_median = r_sum/(N/2);
 cout << "The median of ratio coefficient is " << ratio_median << endl;
 cout << "Now we'll cacluclate MCD: " << endl;
-double MCD;
+double MCD = 0;
+double MCD_sum = 0;
 for(int i = 0; i<(N/2); i++)
 {
-    MCD += pow((ratio_n[i]- ratio_median), 2);
+    MCD_sum += (ratio_n[i]- ratio_median)*(ratio_n[i]- ratio_median);
 }
-MCD = pow(MCD, (2/N));
+MCD = sqrt(MCD_sum/(N/2 - 1));
 cout << MCD;
+
     return 0;
 }
