@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-srand(time(NULL));
+srand(time(NULL));//seed random
 int N;
 cout << "enter array length ";
 cin >> N;
@@ -18,9 +18,9 @@ int arr_D[N]  = {};
 cout << "The resulting (random?) array is below:" << endl;
 for(int i = 0; i<N; i++)
 {
-    //arr[i] = rand()%10;
-    cout << "Insert a number " << endl;
-    cin >> arr[i];
+    arr[i] = rand()%10;
+    //cout << "Insert a number " << endl;
+    //cin >> arr[i];
     if(arr[i]>10)
     arr[i] = arr[i]%10;
     cout << arr[i] << "; ";
@@ -153,7 +153,7 @@ for(int i = 0; i<10; i++)
     }
 }
 
-cout << "With " << count << " duplicates" << endl;
+cout << "With " << count-1 << " duplicates" << endl;
 count = 0;
 cout << "The smallest is " << min << endl;
 for(int i = 0; i<N; i++)
@@ -161,7 +161,7 @@ for(int i = 0; i<N; i++)
     if(arr[i] == min)
     count ++;
 }
-cout << "With " << count << " duplicates" << endl;
+cout << "With " << count-1 << " duplicates" << endl;
 
 cout << "The median is " << mid << endl;
 cout << "The median quadratic deviation is " << MCD << endl;
