@@ -76,7 +76,7 @@ double MCD(int length, float arr[length])
     int sum_D = 0;
     for(int i = 0; i<length; i++)
     {
-        sum_D += (arr[i] - median(N, arr[N]))*(arr[i] - median(N, arr[N]));
+        sum_D += (arr[i] - median(N, arr))*(arr[i] - median(N, arr));
     }
     mcd = sqrt(sum_D/(N-1));
     return mcd;
@@ -92,26 +92,26 @@ int main()
     float arr[N] = {};
     if(quest == "Random" || quest == "random")
     {
-        arr_rand(N, arr[N]);
+        arr_rand(N, arr);
         cout << "Is sorting needed? (y/n)" << endl;
         char ans;
         cin >> ans;
         if(ans == y)
         {
-            shaker_sort(N, arr[N]);
+            shaker_sort(N, arr);
             cout << "Here's your sorted list:" << endl;
-            arr_out(N, arr[N]);
+            arr_out(N, arr);
         }
         else
         {
             cout << "Here's your list: " << endl;
-            arr_out(N, arr[N]);
+            arr_out(N, arr);
         }
     }
     else
     {
         cout << "Insert numbers below: " << endl;
-        arr_in(N, arr[N]);
+        arr_in(N, arr);
     }
     return 0;
 }
